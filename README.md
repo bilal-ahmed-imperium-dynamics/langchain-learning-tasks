@@ -1,4 +1,5 @@
-﻿# LangChain Learning Tasks\nA project to master LangChain through structured tasks.
+﻿# LangChain Learning Tasks
+A project to master LangChain through structured tasks.
  
- Contributor:
- - Bilal Ahmed
+Contributor:
+- Bilal Ahmed

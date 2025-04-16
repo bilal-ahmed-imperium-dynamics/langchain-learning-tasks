@@ -1,7 +1,7 @@
 # LangChain Learning Tasks
 
-A project to master LangChain through tasks.\n
-Contributor: Bilal Ahmed
+A project to master LangChain through tasks.
+\nContributor: Bilal Ahmed
 
 ## Task 1: Azure OpenAI Environment Setup
 

@@ -1,6 +1,6 @@
 # LangChain Learning Tasks
 
-A project to master LangChain through tasks.
+A project to master LangChain through tasks.\n
 Contributor: Bilal Ahmed
 
 ## Task 1: Azure OpenAI Environment Setup
@@ -26,7 +26,7 @@ This task configures and validates Azure OpenAI credentials using environment va
 2. Run:
 
 ```bash
-python task-1
+python task-1\task1.py
 ```
 
 ## Task 2: Building a Basic Summarization Chain
@@ -62,9 +62,8 @@ Artificial intelligence (AI) is revolutionizing various industries by automating
 ```
 
 The 1-Sentence Summary:
-``bash
+```bash
 Artificial intelligence is revolutionizing various industries through automation and enhanced decision-making, while also presenting ethical challenges that necessitate responsible development and regulation.
 
 ```
 
-```

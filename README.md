@@ -135,3 +135,37 @@ This module implements a custom TextSummarizer tool that wraps a summarization c
 
    - Specific: "Summarize the impact of AI on healthcare"
    - Vague: "Summarize something interesting"
+
+## Task 05: Retriever + Summarizer Custom Agent
+
+This agent combines document retrieval (Task 3) and text summarization (Task 2) into a single pipeline using a LangChain agent with three tools:
+
+1. **TextRetriever:** Finds relevant text from a document based on a query
+
+2. **TextSummarizer:** Condenses retrieved text into a 3-sentence summary
+
+3. **WordCounter:** Counts words in the summary (used only when explicitly requested)
+
+### Usage
+
+The agent takes two tests. For the first test, the agent accepts natural language prompt, requesting only retrieval and summarization of AI breakthroughs:
+
+1. Basic Retrieval + Summarization:
+
+```bash
+agent.invoke("Only find and then finally summarize text about AI breakthroughs from the document.")
+```
+
+2. Retrieval + Summarization + Word Count:
+
+```bash
+agent.invoke("Find and summarize text about AI breakthroughs from the document. Add the word count at the end of the summary.")
+```
+
+### Key Features
+
+- Zero-shot agent dynamically selects tools based on prompt instructions
+
+- Handles both pure summarization and summary+metrics requests
+
+- Verbose mode shows the agent's decision-making process

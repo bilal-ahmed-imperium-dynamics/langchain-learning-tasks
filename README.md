@@ -190,3 +190,33 @@ This script demonstrates how different memory types affect text summarization wh
 - First summarize ML text using basic summarizer
 - Then summarize DL text using both memory types
 - Compare the outputs
+
+## Task 7: Leveraging Document Loaders
+
+### Overview:
+
+This task demonstrates how to use LangChain to load, process, and analyze documents from multiple sources—a local PDF and a live webpage—then compare summaries retrieved from each.
+
+It does the following:
+
+- Loads a 2-page PDF on AI ethics.
+
+- Scrapes a 300-word article on AI trends from the web.
+
+- Splits each source into 150-character chunks with 30-character overlap.
+
+- Indexes each chunk using Chroma vector stores (in-memory).
+
+- Queries both sources with "AI challenges".
+
+- Summarizes results using a custom summarizer (from Task 2).
+
+- Prints and compares the summaries.
+
+### Output
+
+You’ll see two summaries printed:
+
+1. One based on the PDF
+
+2. One based on the webpage

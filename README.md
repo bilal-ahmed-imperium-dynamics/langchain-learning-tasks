@@ -169,3 +169,24 @@ agent.invoke("Find and summarize text about AI breakthroughs from the document. 
 - Handles both pure summarization and summary+metrics requests
 
 - Verbose mode shows the agent's decision-making process
+
+## Task 6: Memory-Enhanced Summarization Comparison
+
+This script demonstrates how different memory types affect text summarization when processing related topics sequentially.
+
+### Key Features:
+
+- Compares ConversationBufferMemory (stores exact past interactions) vs ConversationSummaryMemory (maintains summarized context)
+- Processes machine learning text first, then deep learning text with memory of prior summary
+- Uses a custom Summarizer from Task 2 for initial summarization
+- Limits buffer memory to last 3 interactions
+
+### Usage
+
+1. Set up Azure OpenAI credentials in .env
+
+2. Run the script to:
+
+- First summarize ML text using basic summarizer
+- Then summarize DL text using both memory types
+- Compare the outputs

@@ -241,3 +241,23 @@ The task was to enhance the summarization chain from Task 2 by returning a struc
 
 - **Input:** A 150-word text on AI applications.
 - **Output:** returns valid JSON with both fields.
+
+## Task 9: Experimenting with Multi-Query Retrieval
+
+The task is to implement a retriever by using MultiQueryRetriever to generate 3 semantically diverse queries from a single input.
+
+### Key features:
+
+- Replaced standard retriever with MultiQueryRetriever for broader coverage.
+
+- Used it to query "AI advancements" on the ai_intro.txt vector store.
+
+- Compared the depth and detail of summaries between:
+
+- Multi-query retrieved text.
+
+- Single-query (Task 3) retrieved text.
+
+### Outcome:
+
+Multi-query retrieval produced more informative summaries, pulling in richer and more varied context from the vector store as compared to single-query retrieval.

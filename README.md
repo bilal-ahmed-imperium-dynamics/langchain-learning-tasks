@@ -220,3 +220,24 @@ You’ll see two summaries printed:
 1. One based on the PDF
 
 2. One based on the webpage
+
+## Task 8: Customizing with Output Parsers
+
+The task was to enhance the summarization chain from Task 2 by returning a structured JSON output.
+
+### Key Features:
+
+- Integrated StructuredOutputParser to output.
+
+- JSON contains:
+
+  - "summary": The generated summary text.
+
+  - "length": Character count of the summary.
+
+- Prompt includes format instructions based on a defined schema.
+
+### Output:
+
+- **Input:** A 150-word text on AI applications.
+- **Output:** returns valid JSON with both fields.

@@ -261,3 +261,27 @@ The task is to implement a retriever by using MultiQueryRetriever to generate 3 
 ### Outcome:
 
 Multi-query retrieval produced more informative summaries, pulling in richer and more varied context from the vector store as compared to single-query retrieval.
+
+## Task 10: Question-Answering Chain on Summaries
+
+Builds a QA system that answers questions about both summarized and full text content, comparing response quality.
+
+### Key Features:
+
+- Reuses the Summarizer from Task 2 to generate a 3-sentence summary
+
+- Creates a dedicated LLMChain with a QA prompt template
+
+- Tests the chain on both the summary and original text
+
+- Compares outputs for conciseness
+
+### Output:
+
+- Generated summary of ai_intro.txt
+
+- Answers to "What’s the key event mentioned?" from:
+
+  - The summary (concise, context-limited)
+
+  - The full text (detailed, potentially verbose)

@@ -29,6 +29,10 @@ This task configures and validates Azure OpenAI credentials using environment va
 python task-1\task1.py
 ```
 
+### Output:
+
+![alt text](out1.png)
+
 ## Task 2: Building a Basic Summarization Chain
 
 This task creates a configurable summarization pipeline using Azure OpenAI and LangChain.
@@ -67,6 +71,10 @@ The 1-Sentence Summary:
 Artificial intelligence is revolutionizing various industries through automation and enhanced decision-making, while also presenting ethical challenges that necessitate responsible development and regulation.
 
 ```
+
+### Output:
+
+![alt text](out2.png)
 
 ## Task 3: Creating Retrievers with Summarization
 
@@ -111,6 +119,10 @@ The 21st century has seen remarkable advancements in AI, highlighted by IBM's Dp
 is. The ultimate goal of achieving Artificial General Intelligence (AGI) remains a key focus, with researchers investigating innovative methods to enable machines to generalize knowledge and reason like humans.
 ```
 
+### Output:
+
+![alt text](out3.png)
+
 ## Task 4: Text Summarizer Agent
 
 This module implements a custom TextSummarizer tool that wraps a summarization chain, integrated into a zero-shot-react-description agent powered by Azure OpenAI. The agent can process both specific and vague summarization requests.
@@ -136,6 +148,13 @@ This module implements a custom TextSummarizer tool that wraps a summarization c
    - Specific: "Summarize the impact of AI on healthcare"
    - Vague: "Summarize something interesting"
 
+### Output:
+
+- For AI in Healthcare:
+  ![alt text](out4_1.png)
+- For Vague Prompt:
+  ![alt text](out4_2.png)
+
 ## Task 05: Retriever + Summarizer Custom Agent
 
 This agent combines document retrieval (Task 3) and text summarization (Task 2) into a single pipeline using a LangChain agent with three tools:
@@ -156,11 +175,15 @@ The agent takes two tests. For the first test, the agent accepts natural languag
 agent.invoke("Only find and then finally summarize text about AI breakthroughs from the document.")
 ```
 
+![alt text](out5_1.png)
+
 2. Retrieval + Summarization + Word Count:
 
 ```bash
 agent.invoke("Find and summarize text about AI breakthroughs from the document. Add the word count at the end of the summary.")
 ```
+
+![alt text](out5_2.png)
 
 ### Key Features
 
@@ -191,6 +214,8 @@ This script demonstrates how different memory types affect text summarization wh
 - Then summarize DL text using both memory types
 - Compare the outputs
 
+![alt text](out6.png)
+
 ## Task 7: Leveraging Document Loaders
 
 ### Overview:
@@ -218,8 +243,9 @@ It does the following:
 You’ll see two summaries printed:
 
 1. One based on the PDF
-
+   ![alt text](out7_1.png)
 2. One based on the webpage
+   ![alt text](out7_2.png)
 
 ## Task 8: Customizing with Output Parsers
 
@@ -241,6 +267,7 @@ The task was to enhance the summarization chain from Task 2 by returning a struc
 
 - **Input:** A 150-word text on AI applications.
 - **Output:** returns valid JSON with both fields.
+  ![alt text](out8.png)
 
 ## Task 9: Experimenting with Multi-Query Retrieval
 
@@ -262,6 +289,20 @@ The task is to implement a retriever by using MultiQueryRetriever to generate 3 
 
 Multi-query retrieval produced more informative summaries, pulling in richer and more varied context from the vector store as compared to single-query retrieval.
 
+### Output Screenshots:
+
+- Generated Multi-Queries:
+  ![alt text](out9_4.png)
+
+- Multi Query Retrieved Text & Qord Count:
+  ![alt text](out9_1.png)
+
+- Singe Query Retrieved Text & Word Count:
+  ![alt text](out9_2.png)
+
+- Resultant Summaries:
+  ![alt text](out9_3.png)
+
 ## Task 10: Question-Answering Chain on Summaries
 
 Builds a QA system that answers questions about both summarized and full text content, comparing response quality.
@@ -279,9 +320,35 @@ Builds a QA system that answers questions about both summarized and full text co
 ### Output:
 
 - Generated summary of ai_intro.txt
-
+  ![alt text](out10_3.png)
 - Answers to "What’s the key event mentioned?" from:
-
   - The summary (concise, context-limited)
-
+    ![alt text](out10_1.png)
   - The full text (detailed, potentially verbose)
+    ![alt text](out10_2.png)
+
+## Task 11: Integrating External Tools with Agents
+
+In this task, we extend a LangChain-based agent by integrating external tools to enhance its capabilities. The agent can now fetch the current date/time and perform a mock web search. These tools demonstrate how agents can interact with Python functions to enrich responses based on user queries.
+
+### Key Features
+
+- Text Retrieval Tool: Retrieves relevant content based on a user query.
+
+- Text Summarization Tool: Summarizes any given text into a defined number of sentences.
+
+- DateTime Tool: Returns the current date and time in DD/MM/YYYY HH:MM:SS format.
+
+- Mock Web Search Tool: Simulates a web search by returning a static response with recent AI trends.
+
+### Sample Output
+
+- Input:
+  Summarize this 100-word text about AI and tell me today’s date.
+
+- Output:
+  ![alt text](out11_1.png)
+- Input:
+  Summarize AI trends and search for recent updates.
+- Output:
+  ![alt text](out11_2.png)
